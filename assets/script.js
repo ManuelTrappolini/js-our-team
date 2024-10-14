@@ -85,9 +85,21 @@ function generateTeamMemberCard(teamMember){
   
   formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    let name = document.getElementById('name')
-    let role = document.getElementById('role')
-    let email = document.getElementById('email')
-    let image = document.getElementById('image')
-
+    let name = document.getElementById('name').value
+    let role = document.getElementById('role').value
+    let email = document.getElementById('email').value
+    let image = document.getElementById('image').value
+    
+    const newMember = {
+      name,
+      role,
+      email,
+      image
+    }
+   
+    const markup = generateTeamMemberCard(newMember)
+    console.log(newMember);
+    teamEl.insertAdjacentHTML("beforeend", markup)
   })
+
+ 
