@@ -72,7 +72,7 @@ teamEl.innerHTML = finalMarkup
 function generateTeamMemberCard(teamMember){
   const {name, role , email, img} = teamMember
   return `
-    <div class="col-4 g-5">
+    <div class="col-md-4 g-5 col-sm-12">
       <div class="card ">
         <img  width = 40% src="${img}" alt="">
         <h3>${name}</h3>
