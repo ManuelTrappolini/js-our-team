@@ -47,6 +47,8 @@ const teamMembers = [
 
 const cardEl = document.getElementById('card')
 const teamEl = document.querySelector('#team')
+const formEl = document.querySelector('form')
+
 
 
 
@@ -70,15 +72,22 @@ teamEl.innerHTML = finalMarkup
 function generateTeamMemberCard(teamMember){
   const {name, role , email, img} = teamMember
   return `
-    <div class="col-4">
-      <div class="card">
-        <img src="${img}" alt="">
+    <div class="col-4 g-5">
+      <div class="card ">
+        <img  width = 40% src="${img}" alt="">
         <h3>${name}</h3>
         <h4>${role}</h4>
-        <h4>e${email}</h4>
+        <a class="text-decoration-none" href=""><h4 class="text-primary pb-3">${email}</h4></a>
       </div>
     </div>  
     `
   }
   
-  document.querySelector('img').style.width = 100%
+  formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let name = document.getElementById('name')
+    let role = document.getElementById('role')
+    let email = document.getElementById('email')
+    let image = document.getElementById('image')
+
+  })
