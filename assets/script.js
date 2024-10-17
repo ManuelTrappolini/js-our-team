@@ -72,14 +72,14 @@ teamEl.innerHTML = finalMarkup
 function generateTeamMemberCard(teamMember){
   const {name, role , email, img} = teamMember
   return `
-    <div class="col-md-6 g-5 col-sm-12 col-lg-4">
-      <div class="card bg-dark">
-        <img  width = 50% src="${img}" alt="">
-        <h3 class="text-white">${name}</h3>
-        <h4 class="text-white">${role}</h4>
-        <a class="text-decoration-none" href=""><h4 class="text-primary pb-3">${email}</h4></a>
+      <div class="card bg-dark d-flex flex-row col-sm-12 col-md-6 col-lg-4 g-4 mx-1">
+            <img src="${img}" class=" col-4" alt="...">
+            <div class="card-body col-8">
+              <h4 class="text-white">${name}</h4>
+              <h5 class="mb-2 text-white">${role}</h5>
+              <a class="text-decoration-none" href=""><h5 class="text-primary pb-3">${email}</h5></a>
+            </div>
       </div>
-    </div>  
     `
   }
   
